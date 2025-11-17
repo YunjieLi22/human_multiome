@@ -2,7 +2,8 @@
 
 ## Preamable
 - This directory contains illustration of the overall workflow of creating human fetal cochlear cell atlas
-- Samples of the sequencing data were human cochleae and utricles out of PCW11, PCW14 and PCW16.
+- Related codes illustrate the workflow of processing single-cell multiome, scRNA-seq and stereo-seq data
+- Samples of the sequencing data were all from human cochleae out of PCW11, PCW14 and PCW16.
 - All the scripts were runned on Linux and R.4.5.1, unless specially mentioned.
 - The original data can be assessed on the 
-- Code contributors: Yunjie Li, Jiacheng Fan and Yu Dong
+- Code contributors: Jiacheng Fan, Yunjie Li and Yu Dong
