@@ -7,3 +7,8 @@
 - All the scripts were runned on Linux and R.4.5.1, unless specially mentioned.
 - The original data can be assessed on the 
 - Code contributors: Jiacheng Fan, Yunjie Li and Yu Dong
+
+
+
+## Analysis Workflow and Script Descriptions
+- This repository contains the key computational pipeline for building a human fetal cochlear cell atlas from multi-modal single-cell sequencing data. Each following script performs a specific analytical step.
