@@ -12,3 +12,21 @@
 
 ## Analysis Workflow and Script Descriptions
 - This repository contains the key computational pipeline for building a human fetal cochlear cell atlas from multi-modal single-cell sequencing data. Each following script performs a specific analytical step.
+
+| Script Name | Language | Description |
+| :--- | :--- | :--- |
+| **`01_scRNA_preprocess.R`** | R | Performs initial quality control, filtering, normalization, and feature selection on the raw single-cell RNA-seq data. |
+| **`02_Integration.R`** | R | Integrates scRNA-seq datasets from multiple samples or batches (PCW11, PCW14, PCW16) to correct for technical variance and enable joint analysis. |
+| **`03_peak_gene_link_identification.R`** | R | Processes single-cell multiome (ATAC + RNA) data to identify statistically significant links between chromatin accessibility peaks and potential target genes. |
+| **`04_peak_annotation_and_motif_enrichment.R`** | R | Annotates identified ATAC-seq peaks to genomic features (promoters, enhancers, etc.) and performs motif enrichment analysis to predict binding transcription factors. |
+| **`05_DEG and GO analysis.R`** | R | Identifies differentially expressed genes (DEGs) between cell types or conditions and performs Gene Ontology (GO) enrichment analysis to interpret biological functions. |
+| **`06_SCENiCplus.py`** | Python | Runs the SCENIC+ pipeline, which extends SCENIC to multiome data to infer enhancer-driven gene regulatory networks (GRNs) and cis-regulatory interactions. |
+| **`07_gene_regulatory_network.py`** | Python | Constructs and analyzes cell-type-specific gene regulatory networks based on transcription factor activity and target gene expression. |
+| **`08_perturbation_analysis.py`** | Python | Simulates in silico perturbations (e.g., TF knockout) on the regulatory networks to predict key regulators and network stability. |
+| **`09_trajectory_inference.R`** | R | Performs pseudotime analysis and trajectory inference to model cellular differentiation or developmental processes within the cochlea. |
+| **`10_cell_cell_communication.R`** | R | Infers intercellular communication networks by analyzing ligand-receptor interactions between different cell types. |
+| **`11_PROGENy.R`** | R | Applies the PROGENy method to infer activity of downstream signaling pathways from gene expression data in a cell-type-specific manner. |
+| **`12_human_mouse_integration.R`** | R | Integrates and compares the human fetal cochlear atlas with relevant mouse datasets to assess conservation and identify species-specific features. |
+| **`13_celltype_disease_enrichment.py`** | Python | Maps cell-type-specific gene signatures to known human disease (e.g., hearing loss) associations using enrichment analysis. |
+| **`14_Stereo-seq_disease_enrichment.py`** | Python | Performs spatial enrichment analysis on Stereo-seq data to correlate disease-associated genes or signatures with specific anatomical regions of the cochlea. |
+| **`15_SCENIC_TF_regulatory_disease_enrichment.R`** | R | Integrates SCENIC-inferred transcription factor regulons with disease gene sets to identify TFs potentially linked to cochlear pathologies. |
